@@ -5,8 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e9d8a32-8da1-4c53-9a97-b52f0fc5b26b" name="Changes" comment="inicio">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Users/controller/userController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Users/repositories/userRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Users/services/userService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Rutas/entities/Ruta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Rutas/entities/Ruta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Users/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Users/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Vehiculos/entities/Vehiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Vehiculos/entities/Vehiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/GeoTab/GeoTab/Rutas/entities/Ruta.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/GeoTab/GeoTab/Rutas/entities/Ruta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/GeoTab/GeoTab/Users/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/GeoTab/GeoTab/Users/entities/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/GeoTab/GeoTab/Vehiculos/entities/Vehiculo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/GeoTab/GeoTab/Vehiculos/entities/Vehiculo.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +32,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -43,6 +59,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -53,19 +72,25 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.GeoTabApplication.executor": "Debug",
+    "Application.GeoTabApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/repos_github/GeoTab",
+    "last_opened_file_path": "D:/repos_github/GeoTab/src/main/java/com/GeoTab/GeoTab/Rutas",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\repos_github\GeoTab\src\main\java\com\GeoTab\GeoTab\Rutas" />
+      <recent name="D:\repos_github\GeoTab\src\main\java\com\GeoTab\GeoTab\Vehiculos" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\repos_github\GeoTab" />
       <recent name="D:\repos_github\GeoTab\src\main\resources" />
       <recent name="D:\repos_github\GeoTab\src\main\java\com\GeoTab\GeoTab" />
     </key>

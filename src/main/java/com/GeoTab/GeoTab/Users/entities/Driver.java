@@ -4,15 +4,21 @@ import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.List;
+
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "drivers")
 @Data
-@AllArgsConstructor
 @DiscriminatorValue("DRIVER")
 public class Driver extends User{
     private String nameDriver;
     private String licenseNumber;
+    private String licenseCategory;
+    private LocalDate licenseIssuanceDate;
+    private LocalDate licenseExpirationDate;
 
     public String getNameDriver() {
         return nameDriver;
@@ -30,15 +36,48 @@ public class Driver extends User{
         this.licenseNumber = licenseNumber;
     }
 
-    public Driver(Long id, String email, String password, String nameDriver, String licenseNumber) {
-        super(id, email, password);
-        this.nameDriver = nameDriver;
-        this.licenseNumber = licenseNumber;
+    public String getLicenseCategory() {
+        return licenseCategory;
     }
 
-    public Driver(String nameDriver, String licenseNumber) {
+    public void setLicenseCategory(String licenseCategory) {
+        this.licenseCategory = licenseCategory;
+    }
+
+    public LocalDate getLicenseIssuanceDate() {
+        return licenseIssuanceDate;
+    }
+
+    public void setLicenseIssuanceDate(LocalDate licenseIssuanceDate) {
+        this.licenseIssuanceDate = licenseIssuanceDate;
+    }
+
+    public LocalDate getLicenseExpirationDate() {
+        return licenseExpirationDate;
+    }
+
+    public void setLicenseExpirationDate(LocalDate licenseExpirationDate) {
+        this.licenseExpirationDate = licenseExpirationDate;
+    }
+
+    public Driver(Long id, Long identification, String password, String email, List<Road> roadList,
+                  String nameDriver, String licenseNumber, String licenseCategory,
+                  LocalDate licenseIssuanceDate, LocalDate licenseExpirationDate) {
+        super(id, identification, password, email, roadList);
         this.nameDriver = nameDriver;
         this.licenseNumber = licenseNumber;
+        this.licenseCategory = licenseCategory;
+        this.licenseIssuanceDate = licenseIssuanceDate;
+        this.licenseExpirationDate = licenseExpirationDate;
+    }
+
+    public Driver(String nameDriver, String licenseNumber, String licenseCategory,
+                  LocalDate licenseIssuanceDate, LocalDate licenseExpirationDate) {
+        this.nameDriver = nameDriver;
+        this.licenseNumber = licenseNumber;
+        this.licenseCategory = licenseCategory;
+        this.licenseIssuanceDate = licenseIssuanceDate;
+        this.licenseExpirationDate = licenseExpirationDate;
     }
 
     public Driver() {

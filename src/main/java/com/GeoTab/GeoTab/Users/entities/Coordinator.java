@@ -33,10 +33,6 @@ public class Coordinator extends User {
         this.nameCoordinator = nameCoordinator;
     }
 
-    public Coordinator(Long id, String email, String password, String nameCoordinator) {
-        super(id, email, password);
-        this.nameCoordinator = nameCoordinator;
-    }
 
     public Coordinator() {
     }

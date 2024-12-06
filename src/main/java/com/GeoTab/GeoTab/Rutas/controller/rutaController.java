@@ -1,7 +1,7 @@
 package com.GeoTab.GeoTab.Rutas.controller;
 
+import com.GeoTab.GeoTab.Rutas.entities.Ruta;
 import com.GeoTab.GeoTab.Rutas.services.rutaService;
-import com.GeoTab.GeoTab.Users.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,45 +9,55 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api/rutas")
 public class rutaController {
     @Autowired
     private rutaService rutaService;
 
-    // Obtener todos los usuarios
-    @GetMapping
-    public List<User> getAllUsers() {
-        return rutaService.getAllUsers();
-    }
-
-    // Obtener un usuario por ID
-    @GetMapping("/{id}")
-    public ResponseEntity<User> getUserById(@PathVariable Long id) {
-        User user = rutaService.getUserById(id);
-        return user != null ? ResponseEntity.ok(user) : ResponseEntity.notFound().build();
-    }
-
-    // Crear un nuevo usuario
+    // Crear una nueva ruta
     @PostMapping
-    public User createUser(@RequestBody User user) {
-        return rutaService.saveUser(user);
+    public ResponseEntity<Ruta> createRuta(@RequestBody Ruta ruta) {
+        Ruta nuevaRuta = rutaService.createRuta(ruta);
+        return ResponseEntity.status(201).body(nuevaRuta);
     }
 
-    // Actualizar un usuario existente
-    @PutMapping("/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User userDetails) {
-        User updatedUser = rutaService.updateUser(id, userDetails);
-        return updatedUser != null ? ResponseEntity.ok(updatedUser) : ResponseEntity.notFound().build();
+    // Obtener todas las rutas
+    @GetMapping
+    public ResponseEntity<List<Ruta>> getAllRutas() {
+        List<Ruta> rutas = rutaService.getAllRutas();
+        return ResponseEntity.ok(rutas);
     }
 
-    // Eliminar un usuario
-    @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteUser(@PathVariable Long id) {
-        boolean isDeleted = rutaService.deleteUser(id);
-        if (isDeleted) {
-            return ResponseEntity.ok().body("{\"message\": \"Usuario eliminado con éxito\"}");
+    // Obtener una ruta por su ID
+    @GetMapping("/{id}")
+    public ResponseEntity<Ruta> getRutaById(@PathVariable Long id) {
+        Ruta ruta = rutaService.getRutaById(id);
+        if (ruta != null) {
+            return ResponseEntity.ok(ruta);
         } else {
-            return ResponseEntity.status(404).body("{\"message\": \"Usuario no encontrado\"}");
+            return ResponseEntity.status(404).body(null);
+        }
+    }
+
+    // Actualizar una ruta
+    @PutMapping("/{id}")
+    public ResponseEntity<Ruta> updateRuta(@PathVariable Long id, @RequestBody Ruta ruta) {
+        Ruta rutaActualizada = rutaService.updateRuta(id, ruta);
+        if (rutaActualizada != null) {
+            return ResponseEntity.ok(rutaActualizada);
+        } else {
+            return ResponseEntity.status(404).body(null);
+        }
+    }
+
+    // Eliminar una ruta
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteRuta(@PathVariable Long id) {
+        boolean isDeleted = rutaService.deleteRuta(id);
+        if (isDeleted) {
+            return ResponseEntity.ok().body("{\"message\": \"Ruta eliminada con éxito\"}");
+        } else {
+            return ResponseEntity.status(404).body("{\"message\": \"Ruta no encontrada\"}");
         }
     }
 }

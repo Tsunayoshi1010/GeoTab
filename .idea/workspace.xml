@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e9d8a32-8da1-4c53-9a97-b52f0fc5b26b" name="Changes" comment="inicio">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Rutas/controller/rutaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Rutas/repositories/rutaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Rutas/services/rutaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Vehiculos/controller/vehiculoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Vehiculos/repositories/vehiculoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Vehiculos/services/vehiculoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Rutas/entities/Ruta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Rutas/entities/Ruta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Users/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Users/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Rutas/controller/rutaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Rutas/controller/rutaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Rutas/repositories/rutaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Rutas/repositories/rutaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Rutas/services/rutaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/GeoTab/GeoTab/Rutas/services/rutaService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

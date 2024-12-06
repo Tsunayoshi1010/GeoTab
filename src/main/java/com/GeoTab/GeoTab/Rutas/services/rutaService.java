@@ -1,45 +1,46 @@
 package com.GeoTab.GeoTab.Rutas.services;
 
+import com.GeoTab.GeoTab.Rutas.entities.Ruta;
 import com.GeoTab.GeoTab.Rutas.repositories.rutaRepository;
-import com.GeoTab.GeoTab.Users.entities.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.*;
 
 @Service
 public class rutaService {
     @Autowired
-    private rutaRepository rutaRepository;
+    private rutaRepository rutaRep;
 
-    public List<User> getAllUsers() {
-        return rutaRepository.findAll();
+    // Crear una nueva ruta
+    public Ruta createRuta(Ruta ruta) {
+        return rutaRep.save(ruta);
     }
 
-    public User getUserById(Long id) {
-        return rutaRepository.findById(id).orElse(null);
+    // Obtener todas las rutas
+    public List<Ruta> getAllRutas() {
+        return rutaRep.findAll();
     }
 
-    public User saveUser(User user) {
-        return rutaRepository.save(user);
+    // Obtener una ruta por su ID
+    public Ruta getRutaById(Long id) {
+        Optional<Ruta> ruta = rutaRep.findById(id);
+        return ruta.orElse(null);
     }
 
-    public User updateUser(Long id, User userDetails) {
-        User existingUser = getUserById(id);
-        if (existingUser != null) {
-            existingUser.setNames(userDetails.getNames());
-            existingUser.setEmail(userDetails.getEmail());
-            existingUser.setUsername(userDetails.getUsername());
-            existingUser.setPassword(userDetails.getPassword());
-            existingUser.setIdVehiculo(userDetails.getIdVehiculo());
-            return rutaRepository.save(existingUser);
+    // Actualizar una ruta
+    public Ruta updateRuta(Long id, Ruta ruta) {
+        if (rutaRep.existsById(id)) {
+            ruta.setIdRuta(id);
+            return rutaRep.save(ruta);
         }
         return null;
     }
 
-    public boolean deleteUser(Long id) {
-        if (rutaRepository.existsById(id)) {
-            rutaRepository.deleteById(id);
+    // Eliminar una ruta
+    public boolean deleteRuta(Long id) {
+        if (rutaRep.existsById(id)) {
+            rutaRep.deleteById(id);
             return true;
         }
         return false;

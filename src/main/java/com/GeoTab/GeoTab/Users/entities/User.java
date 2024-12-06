@@ -13,6 +13,7 @@ public class User {
     private String username;
     private String password;
     private Long idVehiculo;
+    private Long idRuta;
 
     // Getters y Setters
     public Long getIdUser() {

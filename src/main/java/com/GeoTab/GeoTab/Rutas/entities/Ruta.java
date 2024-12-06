@@ -6,19 +6,19 @@ import jakarta.persistence.*;
 public class Ruta {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Opcional: define cómo se genera el ID
-    private Long id;
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idRuta;
     private String nombre;
     private String descripcion;
+    private Long idDemanda;
 
     // Getters y setters
-    public Long getId() {
-        return id;
+    public Long getIdRuta() {
+        return idRuta;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdRuta(Long id) {
+        this.idRuta = id;
     }
 
     public String getNombre() {
@@ -35,5 +35,13 @@ public class Ruta {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public Long getIdDemanda() {
+        return idDemanda;
+    }
+
+    public void setIdDemanda(Long idDemanda) {
+        this.idDemanda = idDemanda;
     }
 }
